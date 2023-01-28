@@ -1,0 +1,71 @@
+//!*************COLORS **********************/
+
+$orange: #F97F29;
+$green: #DFF296;
+$dark: #19283F;
+$light: #F5F5F5;
+
+//**************MEDIA QUERIES ****************/
+
+$mq-xl: 1900px; 
+$mq-lg: 1240px; 
+$mq-sm: 752px;
+$mq-xs: 374px;
+
+//**************FONTS****************/
+
+$font-titles: 'Roboto', Arial, sans-serif;
+$font-text: 'Montserrat', sans-serif;
+
+//**FONT-SIZE FOR REM CALCULATION */
+
+$html-font-size: 16px; // base for 1000px
+$html-font-size-sm: 24px; // base for 1000px
+$html-font-size-lg: 28px; // base for 1000px
+$html-font-size-xl: 32px; // base for 1000px
+
+//****************FONT-SIZES**********/
+$font-size-hero: 5rem;
+
+$font-size-text: 1rem;
+$font-size-section: 2rem; //h2
+$font-size-title: 1.7rem;//h3
+$font-size-subtitle: 1.3rem;//h4
+
+//**************SIZES****************/
+// header
+$height-header-xl: 150px;
+
+//**************Z-INDEX****************/
+
+$z-index-navigation: 10;
+$z-index-notification: 100;
+$z-index-modal: 1000;
+$z-index-fullscreen: 50;
+
+//**********offset
+$offset-basic: 4px;
+
+//**********border-radius
+$border-radius-default: 4px;
+$border-radius-section: $border-radius-default * 4;
+$size-default-border: 2px;
+$size-section-border: 4px;
+
+//! templates of media queries
+
+// @include media-xs {
+
+// }
+
+// @include media-sm {
+
+// }
+
+// @include media-md {
+
+// }
+
+// @include media-lg {
+
+// }
