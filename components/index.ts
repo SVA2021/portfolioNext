@@ -1,4 +1,2 @@
-export * from './Header/Header';
-export * from './Footer/Footer';
-export * from './Layout/Layout';
 export * from './SvgIcon/SvgIcon';
+export * from './Logo/Logo';
