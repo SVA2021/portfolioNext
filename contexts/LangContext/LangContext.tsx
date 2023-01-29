@@ -1,7 +1,9 @@
-import React, {useState, FC, ReactNode} from 'react';
+import React, {FC, ReactNode, useEffect, useState} from 'react';
+
+type EnOrRu = 'en' | 'ru';
 
 type Tlang = {
-  lang: 'en' | 'ru',
+  lang: EnOrRu,
   toggleLang: () => void
 };
 
@@ -17,13 +19,17 @@ const defaultLangValue: Tlang = {
 export const LangContext = React.createContext<Tlang>(defaultLangValue);
 
 export const LangProvider: FC<withChildren> = ({children}) => {
+  const [lang, setLang] = useState<EnOrRu>('en');
 
-  const [lang, setLang] = useState<'en' | 'ru'>('en');
+  useEffect(() => {
+    const localLang = window.localStorage.getItem('lang') ?? '';
+    if (localLang === 'en' || localLang === 'ru') setLang(localLang);
+  }, [])
 
   const toggleLang = () => {
-    lang === 'en'
-      ? setLang(() => 'ru')
-      : setLang(() => 'en')
+    const newValue: EnOrRu = lang === 'en' ? 'ru' : 'en';
+    setLang(newValue);
+    window.localStorage.setItem('lang', newValue);
   };
 
   return (
