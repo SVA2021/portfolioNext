@@ -5,10 +5,11 @@
   position: fixed;
   height: 4rem;
   min-height: 4rem;
-  top: 0;
-  padding: $offset-basic *2 0;
-  z-index: $z-index-navigation;
   width: 100%;
+  max-width: $mq-xl;
+  top: 0;
+  padding: $offset-basic *2 $offset-basic;
+  z-index: $z-index-navigation;
   background-color: $dark;
   left: 50%;
   transform: translateX(-50%);
