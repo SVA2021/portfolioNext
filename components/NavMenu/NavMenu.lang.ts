@@ -6,7 +6,7 @@ export const content = {
       {href: '/about', title: 'about me', },
       {href: '/contacts', title: 'contacts', },
     ],
-    cv: {href: process.env.hrefEngCV, title: 'cv'},
+    cv: {href: process.env.href_cv_eng, title: 'cv'},
     lang: 'ru',
   },
   ru: {
@@ -16,7 +16,7 @@ export const content = {
       {href: '/about', title: 'Обо мне', },
       {href: '/contacts', title: 'Контакты', },
     ],
-    cv: {href: process.env.hrefRuCV, title: 'резюме'},
+    cv: {href: process.env.href_cv_ru, title: 'резюме'},
     lang: 'eng',
   },
 }
