@@ -1,0 +1,23 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+.main {
+  position: relative;
+  margin: 0 auto;
+  padding: 4rem 2vw;
+  min-height: calc(100vh - 3rem);
+  width: 100%;
+  min-width: $mq-xs;
+
+  @include media-sm {
+    width: $mq-sm;
+  }
+
+  @include media-lg {
+    width: $mq-lg;
+  }
+
+  @include media-xl {
+    width: $mq-xl;
+  }
+}
