@@ -1,5 +1,6 @@
+import {LangProvider} from "@/contexts/";
 import Head from "next/head";
-import {FC, ReactNode, useState} from "react";
+import {FC, ReactNode} from "react";
 import {Footer, Header} from "../index";
 import s from './Layout.module.scss';
 
@@ -8,8 +9,6 @@ interface LayoutProps {
 }
 
 export const Layout: FC<LayoutProps> = ({children}) => {
-
-  const [lang, setLang] = useState<'en' | 'ru'>('en');
 
   return (
     <>
@@ -31,11 +30,13 @@ export const Layout: FC<LayoutProps> = ({children}) => {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <Header />
-      <main className={s.main} lang={lang}>
-        {children}
-      </main>
-      <Footer />
+      <LangProvider>
+        <Header />
+        <main className={s.main}>
+          {children}
+        </main>
+        <Footer />
+      </LangProvider>
     </>
   )
 };
