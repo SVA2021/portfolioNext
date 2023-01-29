@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
-import s from './HeroWord.module.scss'
+// import s from './HeroWord.module.scss'
+import s from '@/styles/Home.module.scss'
 
 interface IHeroWord {
   name: string | undefined | null
