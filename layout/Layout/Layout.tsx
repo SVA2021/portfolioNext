@@ -1,4 +1,3 @@
-import {LangProvider} from "@/contexts/";
 import Head from "next/head";
 import {FC, ReactNode} from "react";
 import {Footer, Header} from "../index";
@@ -30,13 +29,11 @@ export const Layout: FC<LayoutProps> = ({children}) => {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <LangProvider>
-        <Header />
-        <main className={s.main}>
-          {children}
-        </main>
-        <Footer />
-      </LangProvider>
+      <Header />
+      <main className={s.main}>
+        {children}
+      </main>
+      <Footer />
     </>
   )
 };
