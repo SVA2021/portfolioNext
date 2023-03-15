@@ -1,11 +1,13 @@
 //some initial styles
 
 .wrapper {
-  flex: 1 0 auto;
-  margin: 0 auto;
-  padding-left: 2%;
-  padding-right: 2%;
+  // flex: 1 0 auto;
   position: relative;
+  margin: 0 auto;
+  padding: 0 2vw;
+  min-height: calc(100vh - 3rem);
+  // padding-left: 2%;
+  // padding-right: 2%;
   width: 100%;
   min-width: $mq-xs;
 
@@ -22,30 +24,6 @@
   }
 }
 
-
-//*****common  components *****************////
-
-.arrow {
-  @include arrow($light, 1px, 4px);
-  mix-blend-mode: normal;
-  opacity: 0.8;
-}
-
-.down {
-  transform: rotate(45deg);
-}
-
-.right {
-  transform: rotate(-45deg);
-}
-
-.left {
-  transform: rotate(135deg);
-}
-
-.up {
-  transform: rotate(-135deg);
-}
 
 //********* headers ***********************************//
 
