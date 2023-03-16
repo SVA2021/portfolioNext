@@ -1,0 +1,60 @@
+@import "@/styles/_variables.scss";
+@import "@/styles/_mixins.scss";
+
+.section__header {
+  margin: $offset-basic * 4 auto;
+
+  font: 700 $font-size-section $font-titles;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: all 0.35s ease-in-out;
+
+  &:hover {
+    letter-spacing: 0.25em;
+
+    @include media-sm {
+      letter-spacing: 0.5em;
+    }
+  }
+
+  @include media-xl {
+    margin: 2vw auto;
+    font-size: $font-size-section * 2;
+  }
+}
+
+.header__title {
+  margin: $offset-basic * 2 auto;
+
+  font: 700 $font-size-title $font-titles;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $orange;
+  transition: all 0.35s ease-in-out;
+
+  &:hover {
+    letter-spacing: 0.25em;
+    text-shadow: 1px 1px 1px $green;
+  }
+
+  @include media-xl {
+    margin: 2vw auto;
+    font-size: $font-size-title * 2;
+  }
+}
+
+.header__subtitle {
+  margin: $offset-basic *2 auto;
+  font: 500 $font-size-subtitle $font-titles;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $orange;
+
+  @include media-xl {
+    margin: 2vw auto;
+    font-size: $font-size-subtitle * 2;
+  }
+}
