@@ -6,7 +6,7 @@ import {content} from './NavMenu.lang';
 import s from './NavMenu.module.scss';
 
 export const NavMenu: FC = () => {
-
+//todo add i18n
   const {lang, toggleLang} = useContext(LangContext);
   const [isOpen, setIsOpen] = useState(false);
   const MenuLinks = content[lang].menu;

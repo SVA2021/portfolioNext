@@ -10,5 +10,5 @@ const nextConfig = {
     href_hh: 'https://hh.ru/applicant/resumes/view?resume=e30eb6d2ff0983faee0039ed1f62784758716e',
   },
 }
-
+//todo find another place to keep data
 module.exports = nextConfig;

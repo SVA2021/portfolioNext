@@ -8,7 +8,7 @@ const me = {
   en: {fullName: ['Sofronov', 'Vitaliy', 'Alexandrovich'], },
   ru: {fullName: ['Софронов', 'Виталий', 'Александрович'], },
 }
-
+// todo move data to separate files
 const HeroLinks = [
   {
     title: 'telegram',

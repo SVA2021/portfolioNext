@@ -6,6 +6,7 @@ interface ILogo {
 }
 
 export const Logo: FC<ILogo> = ({name}) => {
+//todo add i18n
 
   const logoName: string[] = name.split('');
 

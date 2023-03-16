@@ -7,6 +7,7 @@ interface IHeroWord {
 }
 
 export const HeroWord: FC<IHeroWord> = ({name}) => {
+//todo clean code
 
   const firstLetter = name?.slice(0, 1) ?? '';
   const restLetters = name?.slice(1) ?? '';

@@ -1,5 +1,5 @@
-//******************** Media Queries ***********************/
-
+@import '@/styles/_variables.scss';
+//todo clean unused code
 @mixin media-xs {
 	@media (min-width: #{$mq-xs}) {
 		@content;
@@ -12,11 +12,11 @@
 	}
 }
 
-@mixin media-md {
-	@media (min-width: #{$mq-md}) {
-		@content;
-	}
-}
+//@mixin media-md {
+//	@media (min-width: #{$mq-md}) {
+//		@content;
+//	}
+//}
 
 @mixin media-lg {
 	@media (min-width: #{$mq-lg}) {

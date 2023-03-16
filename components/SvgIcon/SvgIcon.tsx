@@ -8,6 +8,8 @@ interface SvgIconProps {
   alt?: string
 }
 
+//todo add path and small props
+
 export const SvgIcon: FC<SvgIconProps> = ({src, alt}) => {
   const href = alt ? `/${src}#${alt}` : `/${src}`;
   return (

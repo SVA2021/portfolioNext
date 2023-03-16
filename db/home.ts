@@ -15,3 +15,5 @@ export const content = {
     lang: 'eng',
   },
 }
+
+//todo move all to locales

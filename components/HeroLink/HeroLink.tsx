@@ -14,6 +14,7 @@ export const HeroLink: FC<HeroLinkProps> = ({title, href}) => {
       className={s.hero__link}
       href={href}
     >
+      {/*//todo change to SVG_Icon component*/}
       <svg className={s.icon__svg} role="img" aria-label={title}>
         <use href={svgHref}></use>
       </svg>
