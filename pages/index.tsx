@@ -3,6 +3,8 @@ import {LangContext} from '@/contexts'
 import {Layout} from '@/layout'
 import s from '@/styles/Home.module.scss'
 import {useContext} from 'react'
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {GetStaticProps} from "next";
 
 const me = {
   en: {fullName: ['Sofronov', 'Vitaliy', 'Alexandrovich'], },
@@ -57,3 +59,29 @@ export default function Home() {
     </Layout>
   )
 };
+
+// import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+// import {GetStaticProps} from "next";
+
+// export const getStaticProps: GetStaticProps<Props> = async ({
+//                                                               locale,
+//                                                             }) => ({
+//   props: {
+//     ...(await serverSideTranslations(locale ?? 'en', [
+//       'common',
+//     ])),
+//   },
+// })
+type Props = {
+  // Add custom props here
+}
+export const getStaticProps: GetStaticProps<Props> = async ({
+                                                              locale,
+                                                            }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'en', [
+      'common',
+      // 'footer',
+    ])),
+  },
+})
