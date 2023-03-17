@@ -21,7 +21,6 @@
   text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 1px $light;
-
   transition: all 0.35s ease-in-out;
 
   @include media-sm {
@@ -49,7 +48,6 @@
       }
     }
   }
-
 }
 
 .hero__letter {
@@ -85,10 +83,8 @@
 
 .hero__social {
   margin-top: $offset-basic ;
-
   display: flex;
   flex-direction: row;
-
 }
 
 .hero__caption {
@@ -114,17 +110,15 @@
     .hero__link {
       color: $orange;
     }
-
-    .icon__svg {
-      stroke: $orange;
-      fill: $orange;
-    }
+    //.icon__svg {
+    //  stroke: $orange;
+    //  fill: $orange;
+    //}
   }
 
   &:focus {
     box-shadow: 2px 2px 10px $orange, -2px -2px 10px $orange;
   }
-
 }
 
 .hero__link {
@@ -132,35 +126,4 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.icon__svg {
-  margin: $offset-basic;
-  display: block;
-  height: 50px;
-  width: 50px;
-
-  fill: $light;
-  stroke: $light;
-  transition: all 0.25s ease-in-out;
-
-  &:hover {
-    stroke: $orange;
-    fill: $orange;
-  }
-
-  &:focus {
-    border-radius: $border-radius-default;
-    box-shadow: 2px 2px 10px $orange, -2px -2px 10px $orange;
-  }
-
-  @include media-lg {
-    height: 70px;
-    width: 70px;
-  }
-
-  @include media-xl {
-    height: 100px;
-    width: 100px;
-  }
 }
