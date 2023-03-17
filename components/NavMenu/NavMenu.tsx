@@ -40,7 +40,7 @@ export const NavMenu: FC = () => {
                         )
                     }
                     <li className={s.menu__item} onClick={() => toggleLang()}>
-                        <span className={s.menu__link}>{lang}</span>
+                        <span className={s.menu__link}>{getNextLang(lang)}</span>
                     </li>
                     <li className={cn(s.menu__item, s.cv)}>
                         <a href={t('cv')} className={s.menu__link} download>cv</a>
