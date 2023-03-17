@@ -34,6 +34,16 @@ const nextConfig = {
     typescript: {
         tsconfigPath,
     },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'ik.imagekit.io',
+                port: '',
+                pathname: '/sva/**',
+            },
+        ],
+    },
 }
 
 module.exports = nextConfig
