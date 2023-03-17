@@ -1,4 +1,4 @@
-import {HeroLink, HeroWord} from '@/components'
+import {HeroLink, HeroWord,} from '@/components'
 import {Layout} from '@/layout'
 import s from '@/styles/Home.module.scss'
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
@@ -26,7 +26,7 @@ export default function Home() {
                     {
                         HeroLinks.map((item) =>
                             <li className={s.hero__item} key={item.id}>
-                                <HeroLink title={item.id} href={item.href ?? ''}/>
+                                <HeroLink src={item.src} href={item.href} id={item.id}/>
                             </li>
                         )
                     }
