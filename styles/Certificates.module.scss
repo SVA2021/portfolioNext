@@ -1,0 +1,110 @@
+@import './variables';
+@import './_mixins';
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.gallery__img {
+  width: 100%;
+}
+
+.gallery__item {
+  margin: $offset-basic * 2;
+  position: relative;
+
+  border: 1px solid $orange;
+  border-radius: $border-radius-default;
+
+  &:hover {
+    transform: scale(1.005);
+    box-shadow: 2px 2px 5px $orange, -2px -2px 5px $orange;
+
+    .gallery__tooltip {
+      z-index: $z-index-notification;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .gallery__caption {
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &:focus-within {
+    box-shadow: 2px 2px 10px $light, -2px -2px 10px $light;
+  }
+
+  a:focus{
+    box-shadow: none;
+  }
+
+}
+
+.gallery__tooltip {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: $offset-basic *2;
+  border: 1px solid $orange;
+  border-radius: $border-radius-default;
+  color: $orange;
+  background-color: $dark;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 2px 2px 10px $green, -2px -2px 10px $green;
+}
+
+.gallery__caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $offset-basic *4;
+  height: 5rem;
+  color: $light;
+  background-color: $dark;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.geekbrains {
+
+  .gallery__item {
+    width: 300px;
+  }
+
+  .gallery__img {
+    aspect-ratio: 30/22;
+  }
+}
+
+.sololearn {
+
+  .gallery__item {
+    width: 96%;
+
+    @include media-sm {
+      width: 45%;
+    }
+  }
+
+  .gallery__img {
+    aspect-ratio: 1754/1238;
+  }
+}
+
+
+.other {
+
+  .gallery__item {
+    width: 96%;
+  }
+}
