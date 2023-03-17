@@ -1,0 +1,14 @@
+{
+  "title": "Обо мне",
+  "bio": "биография",
+  "skill": "навыки",
+  "gh": "GitHub статистика",
+  "certificate": "сертификаты",
+  "bioFull": "Привет. Меня зовут Виталий и я Front-end разработчик-самоучка.\nМне нравится процесс превращения идеи в реальную вещь, деталь, устройство.\nПо этой причине я до этого 10 лет работал технологом.\nЯ постоянно стремлюсь понять что-то новое в технике и не только.\nТеперь я хочу больше узнать об устройстве одной из самых используемых технологий в мире в 21 веке -\nИнтернет.",
+  "statsSrc": "https://github-readme-stats.vercel.app/api?username=SVA2021&show_icons=true&include_all_commits=true&theme=dark&hide=issues&hide_border=true&locale=ru",
+  "statsAlt": "GitHub основные данные",
+  "mostSrc": "https://github-readme-stats.vercel.app/api/top-langs/?username=SVA2021&count_private=true&include_all_commits=true&theme=dark&layout=compact&hide_border=true&locale=ru",
+  "mostAlt": "GitHub топ используемых языков",
+  "certificateTip": "смотреть все",
+  "certificateImgAlt": "сертификаты"
+}

@@ -1,0 +1,14 @@
+{
+  "title": "About me",
+  "bio": "biography",
+  "skill": "skills",
+  "gh": "GitHub stats",
+  "certificate": "certificates",
+  "bioFull": "Hello. My name is Vitaliy, and I'm a self-taught Front-End Developer.\n       I like the process of turning an idea into a real thing, detail, device.\n       This is the reason why I previously worked as a technologist (process engineer) for 10 years.\n       I constantly strive to understand something new in technics and not only.\n       Now I want to learn more about the structure of one of the most used technologies in the world\n       in the 21st century - the Internet.",
+  "statsSrc": "https://github-readme-stats.vercel.app/api?username=SVA2021&show_icons=true&include_all_commits=true&theme=dark&hide=issues&hide_border=true",
+  "statsAlt": "GitHub main stats",
+  "mostSrc": "https://github-readme-stats.vercel.app/api/top-langs/?username=SVA2021&count_private=true&include_all_commits=true&theme=dark&layout=compact&hide_border=true",
+  "mostAlt": "GitHub most used languages stats",
+  "certificateTip": "see all in new window",
+  "certificateImgAlt": "certificates"
+}
