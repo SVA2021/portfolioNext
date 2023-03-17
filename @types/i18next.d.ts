@@ -9,10 +9,12 @@ import 'i18next'
 
 import type common from '../public/locales/en/common.json'
 import type about from '../public/locales/en/about.json'
+import type certificates from '../public/locales/en/certificates.json'
 
 interface I18nNamespaces {
     common: typeof common
     about: typeof about
+    certificates: typeof certificates
 }
 
 declare module 'i18next' {
