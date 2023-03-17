@@ -1,87 +1,45 @@
 import {HeroLink, HeroWord} from '@/components'
-import {LangContext} from '@/contexts'
 import {Layout} from '@/layout'
 import s from '@/styles/Home.module.scss'
-import {useContext} from 'react'
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {GetStaticProps} from "next";
-
-const me = {
-  en: {fullName: ['Sofronov', 'Vitaliy', 'Alexandrovich'], },
-  ru: {fullName: ['Софронов', 'Виталий', 'Александрович'], },
-}
-// todo move data to separate files
-const HeroLinks = [
-  {
-    title: 'telegram',
-    href: process.env.href_telegram,
-  },
-  {
-    title: 'discord',
-    href: process.env.href_discord,
-  },
-  {
-    title: 'github',
-    href: process.env.href_github,
-  },
-  {
-    title: 'hh',
-    href: process.env.href_hh,
-  },
-]
+import {useTranslation} from "next-i18next";
+import {HeroLinks} from "@/db/home";
 
 export default function Home() {
 
-  const {lang} = useContext(LangContext);
-  const fullName = me[lang].fullName;
+    const {t} = useTranslation('common');
+    const fullName = t('fullName', {returnObjects: true});
 
-  return (
-    <Layout>
-      <section className={s.hero}>
-        <h1 className={s.hero__name}>
-          {
-            fullName.map((name) =>
-              <HeroWord name={name} key={name} />
-            )
-          }
-        </h1>
-        <p className={s.hero__profession}>Front-End Developer</p>
-        <ul className={s.hero__social}>
-          {
-            HeroLinks.map((item, index) =>
-              <li className={s.hero__item} key={index}>
-                <HeroLink title={item.title} href={item.href ?? ''} />
-              </li>
-            )
-          }
-        </ul>
-      </section>
-    </Layout>
-  )
+    return (
+        <Layout>
+            <section className={s.hero}>
+                <h1 className={s.hero__name}>
+                    {
+                        fullName.map((name: string) =>
+                            <HeroWord name={name} key={name}/>
+                        )
+                    }
+                </h1>
+                <p className={s.hero__profession}>Front-End Developer</p>
+                <ul className={s.hero__social}>
+                    {
+                        HeroLinks.map((item) =>
+                            <li className={s.hero__item} key={item.id}>
+                                <HeroLink title={item.id} href={item.href ?? ''}/>
+                            </li>
+                        )
+                    }
+                </ul>
+            </section>
+        </Layout>
+    )
 };
 
-// import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-// import {GetStaticProps} from "next";
-
-// export const getStaticProps: GetStaticProps<Props> = async ({
-//                                                               locale,
-//                                                             }) => ({
-//   props: {
-//     ...(await serverSideTranslations(locale ?? 'en', [
-//       'common',
-//     ])),
-//   },
-// })
-type Props = {
-  // Add custom props here
-}
-export const getStaticProps: GetStaticProps<Props> = async ({
-                                                              locale,
-                                                            }) => ({
-  props: {
-    ...(await serverSideTranslations(locale ?? 'en', [
-      'common',
-      // 'footer',
-    ])),
-  },
+export const getStaticProps: GetStaticProps<any> = async ({locale}) => ({
+    props: {
+        ...(await serverSideTranslations(locale ?? 'en', [
+            'common',
+        ])),
+    },
 })
