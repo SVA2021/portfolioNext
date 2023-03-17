@@ -1,24 +1,21 @@
 import s from '@/styles/Home.module.scss';
 import {FC} from 'react';
+import {SvgIcon} from "@/components";
 
 export interface HeroLinkProps {
-  title: string
-  href: string
+    src: string
+    id: string
+    href: string
 }
 
-export const HeroLink: FC<HeroLinkProps> = ({title, href}) => {
-  const svgHref = `/social.svg#${title}`;
-  return (
-    <a
-      target="_blank" rel="noreferrer noopener"
-      className={s.hero__link}
-      href={href}
-    >
-      {/*//todo change to SVG_Icon component*/}
-      <svg className={s.icon__svg} role="img" aria-label={title}>
-        <use href={svgHref}></use>
-      </svg>
-      <span className={s.hero__caption}>{title}</span>
-    </a>
-  );
+export const HeroLink: FC<HeroLinkProps> = ({src, id, href}) => {
+    return (
+        <a target="_blank" rel="noreferrer noopener"
+           className={s.hero__link}
+           href={href}
+        >
+            <SvgIcon src={src} id={id}/>
+            <span className={s.hero__caption}>{id}</span>
+        </a>
+    );
 };
