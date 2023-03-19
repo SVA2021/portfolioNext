@@ -1,0 +1,91 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+.form__body {
+  margin: $offset-basic auto;
+  padding: $offset-basic;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form__item {
+  border: $size-section-border solid $light;
+  border-radius: $border-radius-default;
+  margin: $offset-basic;
+  padding: $offset-basic;
+  font-size: 1.25rem;
+  color: $dark;
+  font-weight: 700;
+
+  &:invalid {
+    box-shadow: 2px 2px 10px $orange, -2px -2px 10px $orange;
+  }
+
+  &:focus {
+    box-shadow: 2px 2px 10px $light, -2px -2px 10px $light;
+  }
+}
+
+.form__text {
+  resize: vertical;
+}
+
+.form__item__invalid {
+  color: $orange;
+  box-shadow: 2px 2px 10px $orange, -2px -2px 10px $orange;
+}
+
+.form__tip {
+  margin-left: 1em;
+  color: $orange;
+  font-size: 0.5em;
+}
+
+.form__result {
+  display: inline;
+  letter-spacing: 0;
+  text-transform: lowercase;
+  color: $orange;
+  text-align: center;
+}
+
+.form__label {
+  margin: $offset-basic *2;
+  margin-bottom: 0;
+  font: 500 $font-size-subtitle $font-titles;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.form__btn {
+
+  @include borderDefault;
+  margin: $offset-basic *4 auto;
+  padding: $offset-basic *2;
+  width: 50%;
+  transition: all 0.3s ease-in-out;
+  color: $dark;
+  background-color: $green;
+  font: 700 $font-size-subtitle $font-titles;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $light;
+    background-color: $orange;
+    box-shadow: 2px 2px 10px $green, -2px -2px 10px $green;
+  }
+
+  &:focus {
+    box-shadow: 2px 2px 10px $light, -2px -2px 10px $light;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.special__mark {
+  color: $orange;
+}

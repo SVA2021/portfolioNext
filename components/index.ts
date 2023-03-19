@@ -4,3 +4,4 @@ export * from './NavMenu/NavMenu';
 export * from './HeroWord/HeroWord';
 export * from './HeroLink/HeroLink';
 export * from './Title/Title';
+export * from './ContactForm/ContactForm';
