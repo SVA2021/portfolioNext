@@ -1,0 +1,9 @@
+{
+  "name": "имя",
+  "email": "е-мейл",
+  "message": "сообщение",
+  "submit": "отправить",
+  "warnEmail": "введите корректный email",
+  "warnMinLength": "минимум 3 символа",
+  "warnMaxLength": "максимум 240 символов"
+}

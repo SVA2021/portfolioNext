@@ -1,0 +1,9 @@
+{
+  "name": "name",
+  "email": "email",
+  "message": "message",
+  "submit": "send",
+  "warnEmail": "put correct email",
+  "warnMinLength": "min length 3 symbols",
+  "warnMaxLength": "max length 240 symbols"
+}
