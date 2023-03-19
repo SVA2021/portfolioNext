@@ -1,5 +1,5 @@
 import {Layout} from '@/layout'
-import {SvgIcon, Title} from "@/components";
+import {ContactForm, SvgIcon, Title} from "@/components";
 import {GetStaticProps} from "next";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from "next-i18next";
@@ -8,15 +8,15 @@ import {CONTACTS_LINKS, svgIconSrc} from "@/db/contacts";
 
 export default function Contacts() {
 
-    const {t} = useTranslation('contacts');
+    const {t} = useTranslation(['contacts', 'contactForm']);
 
     return (
         <Layout>
             <section className="contacts">
-                <Title text={t('title')} type={"h2"}/>
+                <Title text={t('title', {ns: 'contacts'})} type={"h2"}/>
                 <div className={s.contacts__inner}>
                     <div className={s.contacts__form}>
-                        form will be here
+                        <ContactForm/>
                     </div>
                     <div className={s.contacts__links}>
                         <ul className={s.social__body}>
@@ -45,6 +45,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({locale}) => ({
         ...(await serverSideTranslations(locale ?? 'en', [
             'common',
             'contacts',
+            'contactForm'
         ])),
     },
 })
