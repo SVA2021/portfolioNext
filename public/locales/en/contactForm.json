@@ -3,6 +3,9 @@
   "email": "email",
   "message": "message",
   "submit": "send",
+  "resultGood": "your message was delivered",
+  "resultBad": "something went wrong, please refresh page and try again",
+  "warnRequired": "required",
   "warnEmail": "put correct email",
   "warnMinLength": "min length 3 symbols",
   "warnMaxLength": "max length 240 symbols"
