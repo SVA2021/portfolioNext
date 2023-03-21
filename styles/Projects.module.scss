@@ -1,0 +1,33 @@
+@import './variables';
+@import './_mixins';
+
+.actual {
+  margin-top: $offset-basic * 8;
+}
+
+.actual__inner {
+  margin-top: $offset-basic * 8;
+}
+
+.future {
+  margin-top: $offset-basic * 16;
+}
+
+.future__inner {
+  margin-top: $offset-basic * 8;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.future__card {
+  margin-top: $offset-basic * 8;
+
+  width: 96%;
+
+  @include media-sm {
+    width: 48%;
+  }
+}
