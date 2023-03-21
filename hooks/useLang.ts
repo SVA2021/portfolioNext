@@ -1,6 +1,6 @@
 import {useRouter} from 'next/router';
+import {langT} from "@/@types/lang";
 
-export type langT = 'en' | 'ru';
 export const defaultLang: langT = 'en';
 
 export function useLang(): langT {
