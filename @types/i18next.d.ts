@@ -12,6 +12,7 @@ import type about from '../public/locales/en/about.json'
 import type certificates from '../public/locales/en/certificates.json'
 import type contacts from '../public/locales/en/contacts.json'
 import type contactForm from '../public/locales/en/contactForm.json'
+import type projects from '../public/locales/en/projects.json'
 
 interface I18nNamespaces {
     common: typeof common
@@ -19,6 +20,7 @@ interface I18nNamespaces {
     certificates: typeof certificates
     contacts: typeof contacts
     contactForm: typeof contactForm
+    projects: typeof projects
 }
 
 declare module 'i18next' {
