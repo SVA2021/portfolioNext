@@ -1,0 +1,45 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+.project {
+  margin-top: $offset-basic * 8;
+
+  width: 96%;
+
+  @include media-sm {
+    width: 48%;
+  }
+}
+
+.project__description {
+  margin: $offset-basic;
+  padding: $offset-basic * 2;
+  line-height: 150%;
+
+  @include media-xl {
+    font-size: 1.5rem;
+  }
+}
+
+.project__name {
+  margin-right: 1em;
+  color: $orange;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+
+  @include media-xl {
+    font-size: 2rem;
+  }
+}
+
+.project__special {
+  margin-right: $offset-basic;
+  color: $orange;
+  font-weight: 700;
+
+  @include media-xl {
+    margin-right: 1rem;
+  }
+}
