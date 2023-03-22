@@ -1,11 +1,3 @@
 export default function Custom404() {
-  return null;
+    return <h1>404 - Page Not Found</h1>
 }
-
-export const getStaticProps = () => {
-  return {
-    redirect: {
-      destination: '/',
-    },
-  };
-};
