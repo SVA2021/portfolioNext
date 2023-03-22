@@ -1,0 +1,148 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+.project {
+  margin: $offset-basic *8 auto;
+
+  @include media-lg {
+    display: grid;
+    align-items: stretch;
+    justify-items: center;
+    gap: 1%;
+    grid-template-columns: 45% 15% auto;
+    grid-template-areas:
+			'title title title'
+			'gallery techno description'
+			'gallery techno description'
+			'gallery techno links';
+  }
+
+  @include media-xl {
+    margin: 4vw auto;
+  }
+
+}
+
+.project__title {
+  margin: $offset-basic *2 auto;
+  grid-area: title;
+}
+
+.project__gallery {
+  grid-area: gallery;
+  align-self: center;
+  margin: $offset-basic *2 auto;
+  width: 96%;
+  box-shadow: 2px 2px 10px $light, -2px -2px 10px $light;
+  border-radius: $border-radius-default;
+  height: 500px;
+
+
+  @include media-xl {
+    height: 750px;
+  }
+}
+
+.project__technologies {
+  grid-area: techno;
+  margin: 2vw auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  @include media-lg {
+    margin: 0 auto;
+  }
+}
+
+.project__description {
+  grid-area: description;
+  margin: $offset-basic;
+  padding: $offset-basic * 2;
+  line-height: 150%;
+
+  @include media-xl {
+    font-size: 1.5rem;
+  }
+}
+
+.project__name {
+  margin-right: 1em;
+  color: $orange;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+
+  @include media-xl {
+    font-size: 2rem;
+  }
+}
+
+.project__special {
+  margin-right: $offset-basic;
+  color: $orange;
+  font-weight: 700;
+
+  @include media-xl {
+    margin-right: 1rem;
+  }
+}
+
+.project__special--link {
+  display: block;
+  width: fit-content;
+  padding: $offset-basic;
+  color: $orange;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: $border-radius-default;
+  transition: all 0.25s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: $green;
+    color: $dark;
+  }
+}
+
+.project__links {
+  margin: $offset-basic;
+  grid-area: links;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.project__link {
+  @include borderDefault;
+  border-radius: $border-radius-section;
+  margin: $offset-basic *2;
+  padding: 0 $offset-basic *2;
+  display: inline-block;
+  width: 96%;
+
+  text-align: center;
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: $light;
+  transition: transform 0.25s ease-in-out;
+
+  &:hover {
+    color: $dark;
+    background-color: $orange;
+    box-shadow: 2px 2px 10px $green, -2px -2px 10px $green;
+  }
+
+  @include media-sm {
+    padding: $offset-basic *2;
+    width: auto;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
