@@ -6,3 +6,5 @@ export * from './HeroLink/HeroLink';
 export * from './Title/Title';
 export * from './ContactForm/ContactForm';
 export * from './FutureProjectCard/FutureProjectCard';
+export * from './ActualProjectCard/ActualProjectCard';
+export * from './Gallery/Gallery';

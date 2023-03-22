@@ -1,0 +1,146 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+.gallery {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.showFull {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    z-index: $z-index-fullscreen;
+    box-shadow: none;
+
+    background-color: rgba(245, 245, 245, .5);
+    -webkit-backdrop-filter: blur(2rem);
+    backdrop-filter: blur(2rem);
+
+    .gallery__img {
+      margin: 0 auto;
+      width: auto;
+      height: auto;
+      max-width: 96%;
+      max-height: 96%;
+      border: 1px solid $orange;
+      box-shadow: 2px 2px 10px $orange, -2px -2px 10px $orange;
+    }
+
+    .gallery__navigation {
+      z-index: $z-index-notification;
+
+      @include media-sm {
+        display: flex;
+        opacity: 1;
+      }
+
+      @include media-lg {
+        width: 33%;
+      }
+    }
+  }
+
+  @include media-lg {
+    &:hover {
+      .gallery__navigation {
+        display: flex;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.gallery__img {
+  border-radius: $border-radius-default;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  border: 1px solid $orange;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.5;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.gallery__navigation {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 5;
+  transition: all 0.3s ease-in-out;
+
+  @include media-lg {
+    display: none;
+    opacity: 0;
+  }
+}
+
+.gallery__navigation__active {
+  display: flex;
+  opacity: 1;
+}
+
+.gallery__btn {
+  @include borderDefault;
+  margin: $offset-basic *2 auto;
+  padding: $offset-basic;
+  transition: all 0.1s linear;
+  color: $dark;
+  background-color: $green;
+  font: 500 $font-size-text $font-titles;
+
+  @include media-sm {
+    font: 700 $font-size-text $font-titles;
+    text-transform: uppercase;
+  }
+
+  @include media-xl {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    background-color: $light;
+    box-shadow: 2px 2px 10px $green, -2px -2px 10px $green;
+  }
+
+  &:focus {
+    box-shadow: 2px 2px 10px $light, -2px -2px 10px $light;
+  }
+
+  &.gallery__btn__active {
+    background-color: $orange;
+  }
+}
