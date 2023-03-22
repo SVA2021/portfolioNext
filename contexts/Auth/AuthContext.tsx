@@ -1,6 +1,6 @@
 import React, {createContext, useEffect, useState} from 'react'
 import {onAuthStateChanged, User} from '@firebase/auth';
-import {authentication} from "@/fb/authentication";
+import {authentication, signInAnonymous} from "@/fb/authentication";
 
 const initialUser: any = null;
 
@@ -15,6 +15,9 @@ export function AuthContextProvider({children}: any) {
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
+
+        if (!user) signInAnonymous();
+
         let unsubscribe;
 
         unsubscribe = onAuthStateChanged(authentication, (user) => {
