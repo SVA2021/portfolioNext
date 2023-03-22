@@ -82,7 +82,7 @@
 }
 
 .hero__social {
-  margin-top: $offset-basic ;
+  margin-top: $offset-basic;
   display: flex;
   flex-direction: row;
 }
@@ -110,10 +110,6 @@
     .hero__link {
       color: $orange;
     }
-    //.icon__svg {
-    //  stroke: $orange;
-    //  fill: $orange;
-    //}
   }
 
   &:focus {

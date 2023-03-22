@@ -1,23 +1,21 @@
 import React, {FC} from 'react';
-// import s from './HeroWord.module.scss'
 import s from '@/styles/Home.module.scss'
 
 interface IHeroWord {
-  name: string | undefined | null
+    name: string | undefined | null
 }
 
 export const HeroWord: FC<IHeroWord> = ({name}) => {
-//todo clean code
 
-  const firstLetter = name?.slice(0, 1) ?? '';
-  const restLetters = name?.slice(1) ?? '';
+    const firstLetter = name?.slice(0, 1) ?? '';
+    const restLetters = name?.slice(1) ?? '';
 
-  return (
-    <span className={s.hero__word}>
+    return (
+        <span className={s.hero__word}>
       <span className={s.hero__letter}>
         {firstLetter}
       </span>
-      {restLetters}
+            {restLetters}
     </span>
-  );
+    );
 };
