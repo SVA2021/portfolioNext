@@ -20,11 +20,11 @@ export default function Projects() {
         if (!devRef.current) {
             getFutureProjects().then((res) => {
                 console.log(res)
-                setFutureProjects(() => res);
+                setFutureProjects(() => res.sort((a, b) => b.id - a.id));
             })
             getActualProjects().then((res) => {
                 console.log(res)
-                setActualProjects(() => res);
+                setActualProjects(() => res.sort((a, b) => b.id - a.id));
             })
             devRef.current = true;
         }

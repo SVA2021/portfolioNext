@@ -11,7 +11,7 @@ export const WEB_SKILLS_FULL = [
 export  type webSkill = typeof WEB_SKILLS_FULL[number];
 
 export type baseProjectT = {
-    id?: number | string
+    id: number
     name: string
     technologies: string
     why: baseLangT
